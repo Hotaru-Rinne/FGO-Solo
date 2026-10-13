@@ -1,0 +1,14 @@
+android/build/
+android/signing/
+node_modules/
+*.log
+.cache/
+
+dist/
+*.p12
+*.jks
+*.keystore
+.env
+.env.*
+
+windows/build/
