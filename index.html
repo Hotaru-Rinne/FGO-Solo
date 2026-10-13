@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#183e3b" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https://api.atlasacademy.io https://fgo.wiki https://api.github.com; object-src 'none'; base-uri 'none'"
+    />
+    <title>一骑千筹 · FGO 单挑计算器</title>
+    <link rel="icon" href="public/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div id="background" aria-hidden="true"></div>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">◇</span>
+        <div><strong>一骑千筹</strong><span>FGO 单挑计算器</span></div>
+      </div>
+      <div class="topbar-actions"><button type="button" class="icon-button" id="go-home" aria-label="返回开始界面" hidden>⌂</button><button
+        type="button"
+        class="icon-button"
+        id="open-settings"
+        aria-label="打开设置"
+      >
+        ⚙
+      </button></div>
+    </header>
+    <main id="app" aria-live="polite">
+      <p class="loading">正在载入离线数据…</p>
+    </main>
+    <div id="toast" role="status"></div>
+    <dialog id="settings-dialog" aria-label="设置">
+      <div id="settings-content"></div>
+    </dialog>
+    <input id="background-file" type="file" accept="image/*" hidden />
+    <input
+      id="backup-file"
+      type="file"
+      accept="application/json,.json"
+      hidden
+    />
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
